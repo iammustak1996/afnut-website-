@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#351708">
+<meta name="description" content="Discover AFNUT. Explore Mini Pack, Premium Pack and Family Pack. Order directly on WhatsApp.">
+<title>AFNUT | A Taste of Nature</title>
+<style>
+:root{--brown:#351708;--brown2:#51250f;--gold:#eab943;--gold2:#f7d77d;--cream:#fff5df;--cream2:#f8e7c4;--green:#16833c;--ink:#32190d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit;text-decoration:none}.top{background:var(--brown);color:#fff1d2;padding:9px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+header{background:#fff8e9;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #35170818}
+.nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:900;color:var(--brown);line-height:.9}
+.brand .leaf{font-size:34px;color:#31813d}.brand strong{font-size:28px;letter-spacing:1px}.brand small{display:block;font-size:13px;letter-spacing:2px;color:#a46b14;margin-top:5px}
+nav{display:flex;align-items:center;gap:23px;font-weight:700;font-size:14px}nav a:hover{color:#a46b14}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:30px;background:var(--gold);color:#291306;font-weight:800;border:0;cursor:pointer;box-shadow:0 4px 0 #a76c17;transition:.2s}
+.btn:hover{transform:translateY(-2px)}.btn.green{background:#168b43;color:white;box-shadow:0 4px 0 #09602b}
+.menu{display:none;background:none;border:0;font-size:25px;color:var(--brown)}
+.hero{background:radial-gradient(circle at 75% 35%,#9d5b18 0,#5a280d 35%,#2c1207 75%);color:#fff4d8;overflow:hidden}
+.hero-inner{max-width:1180px;margin:auto;padding:65px 25px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;min-height:440px}
+.kicker{color:var(--gold2);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,72px);line-height:.98;margin:15px 0;color:#fff}
+h1 span{color:var(--gold)}.hero p{font-size:18px;line-height:1.6;color:#f8e6c5;max-width:510px}
+.hero-art{min-height:300px;display:grid;place-items:center;position:relative}
+.bowl{width:min(390px,85vw);height:250px;border-radius:50%;background:radial-gradient(ellipse at 50% 25%,#d69a42 0 8%,#8a481a 9% 56%,#54270f 57% 70%,transparent 71%);position:relative;filter:drop-shadow(0 24px 18px #14080199)}
+.nuts{position:absolute;top:25px;left:12%;width:76%;height:130px;border-radius:50%;background:radial-gradient(ellipse at 25% 35%,#f0c47b 0 7%,transparent 8%),radial-gradient(ellipse at 50% 60%,#b76a2c 0 9%,transparent 10%),radial-gradient(ellipse at 70% 30%,#e6b66d 0 8%,transparent 9%),radial-gradient(ellipse at 38% 70%,#d08a42 0 9%,transparent 10%),radial-gradient(ellipse at 80% 65%,#9d5424 0 8%,transparent 9%),radial-gradient(ellipse at 55% 28%,#edc27d 0 8%,transparent 9%),radial-gradient(ellipse at 20% 70%,#a85d28 0 8%,transparent 9%),radial-gradient(ellipse at 65% 80%,#e9bd77 0 8%,transparent 9%),radial-gradient(ellipse at 45% 45%,#a95a24 0 8%,transparent 9%);background-color:#7d3d16;box-shadow:inset 0 9px 15px #3a1708}
+.honey{position:absolute;top:0;right:13%;font-size:56px;transform:rotate(-20deg);filter:drop-shadow(0 5px 4px #180900)}
+.hero-note{position:absolute;bottom:4px;right:0;background:var(--gold);color:var(--brown);padding:12px 18px;border-radius:15px;font-family:Georgia,serif;font-style:italic;font-weight:bold;transform:rotate(-5deg)}
+.section{max-width:1180px;margin:auto;padding:58px 22px}.section-head{text-align:center;margin-bottom:30px}.eyebrow{color:#a36b16;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h2{font: bold clamp(28px,4vw,40px) Georgia,serif;color:var(--brown);margin:8px 0}.sub{color:#795b43}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fffaf0;border:1px solid #e8c98b;border-radius:20px;overflow:hidden;box-shadow:0 9px 24px #5a2c1010}
+.packshot{height:190px;display:grid;place-items:center;background:linear-gradient(135deg,#f9e6bd,#fff9ed);position:relative}
+.pack{width:125px;height:150px;border-radius:12px 12px 17px 17px;background:linear-gradient(100deg,#4a1b0b,#7d3510 48%,#351307);box-shadow:8px 10px 16px #54250b33;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff3d5;border:3px solid #d59a30;transform:rotate(-3deg)}
+.pack.gold{background:linear-gradient(100deg,#a96a0c,#f3c44e 48%,#9b5c0c);color:#351708}
+.pack.hinge{width:148px;height:105px;border-radius:8px;background:linear-gradient(100deg,#4a1b0b,#7d3510 48%,#351307);border:3px solid #d59a30;position:relative;padding-top:15px;transform:rotate(-2deg);box-shadow:8px 10px 16px #54250b33}
+.pack.hinge:before{content:'';position:absolute;top:0;left:0;right:0;height:16px;background:linear-gradient(90deg,#8b4b1b,#c58a35,#754018);border-bottom:2px solid #d59a30;border-radius:4px 4px 0 0}
+.pack.hinge:after{content:'';position:absolute;top:13px;left:12px;right:12px;height:3px;background:#e3b45b;border-radius:3px;opacity:.9}
+.pack.jar{width:112px;height:140px;border-radius:22px 22px 30px 30px;background:linear-gradient(90deg,#9b581b,#e2a64c,#8a4817);border:5px solid #dba63b}
+.pack b{font-size:18px;letter-spacing:1px}.pack small{font-size:10px;margin:5px}.pack em{font-size:11px;background:#e7b83f;color:#351708;padding:5px 9px;border-radius:12px;font-style:normal;font-weight:bold}
+.card-body{padding:19px}.card h3{margin:0 0 8px;color:var(--brown);font: bold 22px Georgia,serif}.card p{color:#74563e;line-height:1.5;min-height:45px;margin:0 0 15px}.price{font-weight:800;color:#a36b16;margin-bottom:14px}
+.about{background:var(--brown);color:#fff1d5}.about-inner{max-width:1180px;margin:auto;padding:55px 22px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about h2{color:var(--gold2)}.about p{line-height:1.7;color:#f2dfc0}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.value{border:1px solid #b87b27;border-radius:14px;padding:17px;color:#ffedc6}.value b{display:block;color:var(--gold2);margin-bottom:5px}
+.order{background:linear-gradient(120deg,#f9e5b9,#fff7e8);text-align:center;padding:50px 20px}.order h2{margin-top:0}.order p{color:#75563b}
+footer{background:#240e05;color:#f7e8c9;padding:28px 20px;text-align:center}footer .brand{justify-content:center;color:#f8d77d}footer p{font-size:13px;color:#cbb89a}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:20;border-radius:50px;padding:14px 18px;background:#168b43;color:#fff;font-weight:bold;box-shadow:0 5px 18px #0004}
+@media(max-width:760px){.nav{padding:12px 16px}nav{display:none;position:absolute;top:67px;left:0;right:0;background:#fff8e9;padding:18px;flex-direction:column;gap:17px;border-top:1px solid #ead6ad}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero-inner{grid-template-columns:1fr;padding:48px 22px 30px;text-align:center}.hero p{margin:0 auto 22px}.hero-art{min-height:230px}.bowl{transform:scale(.8)}.honey{right:17%;top:-5px}.products{grid-template-columns:1fr;max-width:420px;margin:auto}.packshot{height:180px}.about-inner{grid-template-columns:1fr}.values{grid-template-columns:repeat(2,1fr)}.top{justify-content:center;text-align:center}.section{padding:45px 18px}}
+</style>
+</head>
+<body>
+<div class="top"><span>✦ A Taste of Nature • A Touch of Honey</span><span>WhatsApp: +91 94743 17708</span></div>
+<header><div class="nav">
+<a class="brand" href="#home"><span class="leaf">❧</span><span><strong>AFNUT</strong><small>HONEY NUTS</small></span></a>
+<button class="menu" aria-label="Open menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav><a href="#home">Home</a><a href="#products">Our Products</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
+<a class="btn green" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20I%20would%20like%20to%20know%20about%20your%20Honey%20Nuts." target="_blank" rel="noopener">☏ Order on WhatsApp</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div><div class="kicker">Good Food • Good Moments</div><h1>AFNUT<br><span>HONEY NUTS</span></h1><p>A Taste of Nature • A Touch of Honey. Discover the AFNUT range and find your favourite pack.</p><a class="btn" href="#products">Explore Products&nbsp; →</a></div>
+<div class="hero-art"><div class="honey">🍯</div><div class="bowl"><div class="nuts"></div></div><div class="hero-note">A little crunch,<br>a touch of honey!</div></div>
+</div></section>
+<section class="section" id="products"><div class="section-head"><div class="eyebrow">Discover the range</div><h2>Our Products</h2><div class="sub">Choose your favourite AFNUT pack</div></div>
+<div class="products">
+<article class="card"><div class="packshot"><div class="pack hinge"><b>AFNUT</b><small>HONEY NUTS</small><em>MINI PACK</em>🥜</div></div><div class="card-body"><h3>Mini Pack</h3><p>A handy mini pack for a quick snack moment.</p><div class="price">Pack Size: 25g</div><div class="price">Price: ₹20</div><a class="btn green" style="width:100%" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20I%20am%20interested%20in%20the%20Mini%20Pack.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener">Order Mini Pack</a></div></article>
+<article class="card"><div class="packshot"><div class="pack gold"><b>AFNUT</b><small>HONEY NUTS</small><em>PREMIUM</em>🥜</div></div><div class="card-body"><h3>Premium Pack</h3><p>Explore our premium AFNUT Honey Nuts pack.</p><div class="price">250g: ₹290</div><div class="price">500g: ₹550</div><a class="btn green" style="width:100%" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20I%20am%20interested%20in%20the%20Premium%20Pack.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener">Order Premium Pack</a></div></article>
+<article class="card"><div class="packshot"><div class="pack jar"><b>AFNUT</b><small>HONEY NUTS</small><em>FAMILY PACK</em>🥜</div></div><div class="card-body"><h3>Family Pack</h3><p>A larger pack to share with family and friends.</p><div class="price">500g: ₹550</div><div class="price">1kg: ₹1,000</div><a class="btn green" style="width:100%" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20I%20am%20interested%20in%20the%20Family%20Pack.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener">Order Family Pack</a></div></article>
+</div></section>
+<section class="about" id="about"><div class="about-inner"><div><div class="kicker">Meet the brand</div><h2>About AFNUT</h2><p>AFNUT brings together a love for delicious nut-based snacks and a touch of honey. Explore our available packs and contact us directly for product details, pricing and availability.</p><a class="btn" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20please%20tell%20me%20more%20about%20your%20brand." target="_blank" rel="noopener">Know More →</a></div>
+<div class="values"><div class="value"><b>01 • Product Range</b>Mini, Premium and Family Packs</div><div class="value"><b>02 • Direct Contact</b>Ask us about ingredients and pack details</div><div class="value"><b>03 • Easy Enquiry</b>Message us on WhatsApp</div><div class="value"><b>04 • Customer Care</b>Get help choosing a pack</div></div></div></section>
+<section class="order" id="contact"><div class="eyebrow">We are one message away</div><h2>Order AFNUT on WhatsApp</h2><p>For current prices, pack sizes and availability, contact us directly.</p><a class="btn green" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20please%20share%20your%20product%20catalogue%2C%20prices%20and%20availability." target="_blank" rel="noopener">☏ Chat on WhatsApp: +91 94743 17708</a></section>
+</main>
+<footer><div class="brand"><span class="leaf">❧</span><span><strong>AFNUT</strong><small>HONEY NUTS</small></span></div><p>A Taste of Nature • A Touch of Honey</p><p>© <span id="year"></span> AFNUT. All rights reserved.</p></footer>
+<a class="wa-float" href="https://wa.me/919474317708?text=Hello%20AFNUT%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">☏ WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));</script>
+</body></html>
